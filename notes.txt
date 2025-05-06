@@ -1,0 +1,41 @@
+pyinstaller --onefile keylogger_test.py
+Optional flags:
+
+--noconsole: hides the terminal window when you double-click the .exe
+
+--icon=icon.ico: sets a custom icon.
+
+Example:
+
+bash
+Copy
+Edit
+pyinstaller --onefile --noconsole --icon=word.ico keylogger_test.py
+The generated .exe file will be in the dist/ folder.
+
+when code is done, run this in term window to make the program an exe file that runs silently in the background:
+pyinstaller --onefile --noconsole --icon=word.ico keylogger_test.py
+
+this program would write out the encrypted data to the log.
+
+4/23
+
+next step: work on logger
+
+
+
+4/27
+Make a stop.txt file in downloads to get the program to stop. will test before its hidden in background
+
+Next steps are to deecide which main i use. Need to make sure i can kill the program properly
+
+4/29
+
+Test the program with the threading, moved kill switch checker out side of while loop, got rid of while loop
+next step is to test the kill switch
+
+5/1
+
+program runs and now wites to files. I added the stop.txt file for logging. just to make sure my program stopped.
+Next step is to make the program run in the background, and figure out how to use the code at the top to make it
+hidden. Future goal is to see if i can send the log file to a remote server or email it to myself.
